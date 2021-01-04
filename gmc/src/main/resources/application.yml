@@ -4,14 +4,12 @@ spring:
     username: root
     password: N2kH5lJVJLAHWObs
     url: jdbc:mysql://localhost:3306/bf?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
-
 #  开发用，修改代码时自动重启生效
   devtools:
     restart:
       enabled: true
       additional-paths: src/main/java
-      additional-exclude: WEB-INF/**
-
+# 开发期间关闭业面缓存
   thymeleaf:
     cache: false
     check-template: true
@@ -21,5 +19,3 @@ mybatis:
 
 server:
   port: 80
-  compression:
-    enabled: true
