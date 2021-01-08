@@ -85,6 +85,11 @@ public class TestController {
         return result;
     }
 
+    @GetMapping("showException")
+    public String showException() throws NullPointerException {
+        throw new NullPointerException("NullPointerException");
+    }
+
     // 通过注解读取所有测试接口
     private static String allFuncs = "";
 

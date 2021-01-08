@@ -1,15 +1,15 @@
 spring:
-#  使用默认数据源Hikari连接池。虽然网上教程一般都建议使用阿里连接池，但是考虑到简易性，所以尽可能使用默认配置
+  #  使用默认数据源Hikari连接池。虽然网上教程一般都建议使用阿里连接池，但是考虑到简易性，所以尽可能使用默认配置
   datasource:
     username: root
     password: N2kH5lJVJLAHWObs
-    url: jdbc:mysql://localhost:3306/bf?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
-#  开发用，修改代码时自动重启生效
+    url: jdbc:mysql://localhost:3306/gm?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+  #  开发用，修改代码时自动重启生效
   devtools:
     restart:
       enabled: true
       additional-paths: src/main/java
-# 开发期间关闭业面缓存
+  # 开发期间关闭业面缓存
   thymeleaf:
     cache: false
     check-template: true
@@ -18,4 +18,6 @@ mybatis:
   type-aliases-package: com.pwrd.gm.gmm
 
 server:
-  port: 80
+  port: 8080
+  servlet:
+    context-path: /gm/

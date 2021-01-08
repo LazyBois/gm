@@ -29,8 +29,7 @@ public class TestService {
 
     public Test insert() {
         Test test = new Test();
-        test.setString("this is a words");
-        test.setStringch("这是一段字符串");
+        test.setString("这是一段字符串");
         test.setId(testMapper.insert(test));
         return test;
     }
@@ -41,7 +40,7 @@ public class TestService {
 
     public String update(long timestamp) {
         Test test = new Test();
-        test.setDateval(new Timestamp(timestamp));
+        test.setTime(new Timestamp(timestamp));
         if (testMapper.update(test) > 0) {
             return "update success";
         } else {
