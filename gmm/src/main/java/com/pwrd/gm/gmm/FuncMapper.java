@@ -8,6 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
+import com.pwrd.gm.gmm.dao.Func;
 import com.pwrd.gm.gmm.dao.Test;
 
 /**
@@ -15,17 +16,10 @@ import com.pwrd.gm.gmm.dao.Test;
  * @author wangtong
  */
 @Mapper
-public interface TestMapper {
+public interface FuncMapper {
+    @Select("select * from func")
+    List<Func> queryAll();
 
-    @Insert("insert into test(string,stringch) value(#{string},#{stringch})")
-    int insert(Test test);
-
-    @Select("select * from test")
-    List<Test> queryAll();
-
-    @Update("update test set time=#{time}")
-    int update(Test test);
-
-    @Delete("delete from test where id=#{id}")
-    int del(Test needDel);
+    @Select("select path,name,component from func")
+    List<Func> queryAllMenu();
 }

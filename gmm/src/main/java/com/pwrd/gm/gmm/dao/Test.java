@@ -5,8 +5,7 @@ public class Test {
 
   private long id;
   private String string;
-  private String stringch;
-  private java.sql.Timestamp dateval;
+  private java.sql.Timestamp time;
 
 
   public long getId() {
@@ -27,21 +26,12 @@ public class Test {
   }
 
 
-  public String getStringch() {
-    return stringch;
+  public java.sql.Timestamp getTime() {
+    return time;
   }
 
-  public void setStringch(String stringch) {
-    this.stringch = stringch;
-  }
-
-
-  public java.sql.Timestamp getDateval() {
-    return dateval;
-  }
-
-  public void setDateval(java.sql.Timestamp dateval) {
-    this.dateval = dateval;
+  public void setTime(java.sql.Timestamp time) {
+    this.time = time;
   }
 
 }
